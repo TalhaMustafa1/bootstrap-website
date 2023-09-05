@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f4f4f4;
+}
+.container{
+    margin-top: 3rem;
+}
+.first-col{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.first-col button{
+    background-color: transparent;
+    border: none;
+    width: 130px;
+    color: #83868a;
+    font-weight: 400;
+    text-align: left !important;
+    padding-left:10px;
+    padding-block: 12px;
+}
+/* Bootstrap 5 text input with search icon */
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+.col-md-5 .col-5-main{
+    margin-top: 2rem;
+}
+.col-md-5 .col-5-main .card{
+     background-color: white;
+     padding-block:1rem;
+     padding-inline: 1rem;
+     
+}
+.col-md-5 .col-5-main .card .col-md-4{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.col-md-5 .col-5-main .card .col-md-4 p{
+    padding:2px;
+    margin: 0;
+}
+.vertical-line{
+    border-left: 3px solid black;
+}
