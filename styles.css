@@ -50,15 +50,47 @@ body{
      padding-inline: 1rem;
      
 }
-.col-md-5 .col-5-main .card .col-md-4{
+.col-md-5 .col-5-main .card .col-md-5{
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
-.col-md-5 .col-5-main .card .col-md-4 p{
+
+.col-md-5 .col-5-main .card .second-col .col-md-3{
+    display: flex;
+    align-items: center;
+}.col-md-5 .col-5-main .card .col-md-4 p{
     padding:2px;
     margin: 0;
+}
+.col-md-5 .col-5-main .card .col-md-5 p{
+    padding:2px;
+    margin: 0;
+}
+.col-md-5 .col-5-main .card .col-md-3{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 .vertical-line{
     border-left: 3px solid black;
 }
+.col-md-5 .col-5-main .card .second-col{
+    font-size: 15px;
+}
+.col-md-5 .col-5-main .card .second-col .title-p{
+    font-size: 17px;
+}
+ /*Responsive cards*/ 
+ @media screen and (max-width: 7680px) {
+          .col-md-5 .col-5-main .card .col-md-4 p{
+            padding:0px;
+            margin: 0;
+        }
+        .col-md-5 .col-5-main .card .second-col .title-p{
+            font-size: 14px;
+        }
+        .col-sm-3{
+            width: 32%;
+        }
+  }
