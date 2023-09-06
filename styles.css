@@ -43,10 +43,13 @@ body{
 }
 .col-md-5 .col-5-main{
     margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
 }
 .col-md-5 .col-5-main .card{
      background-color: white;
-     padding-block:1rem;
+     padding-block:0.6rem;
      padding-inline: 1rem;
      
 }
@@ -59,10 +62,13 @@ body{
 .col-md-5 .col-5-main .card .second-col .col-md-3{
     display: flex;
     align-items: center;
-}.col-md-5 .col-5-main .card .col-md-4 p{
+}
+
+.col-md-5 .col-5-main .card .col-md-4 p{
     padding:2px;
     margin: 0;
 }
+
 .col-md-5 .col-5-main .card .col-md-5 p{
     padding:2px;
     margin: 0;
@@ -81,16 +87,52 @@ body{
 .col-md-5 .col-5-main .card .second-col .title-p{
     font-size: 17px;
 }
+.last-part{
+    background-color: white;
+}
+.last-part-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 2rem;
+    margin-top: 2rem;
+    border: 0.7px dotted black; /* Add the dotted border with pink color */
+    box-shadow: 0 0 10px #f2f2f2; /* Add the pink box shadow in all directions */
+}
+.last-part{
+    margin-top: 20px;
+}
+.last-part-secondPart{
+      display: flex;
+      justify-content: space-between;
+      font-size: 15px;
+      margin-top: 12px;
+      color: #bebac2;
+}
+.last-part-main-content{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #bebac2;
+    padding-top: 8px;
+    
+}
+.cross-p{
+    font-size: 10px;
+}
+.cross-p span{
+    font-size: 15px;
+}
  /*Responsive cards*/ 
- @media screen and (max-width: 7680px) {
+ @media screen and (max-width: 768px) {
           .col-md-5 .col-5-main .card .col-md-4 p{
             padding:0px;
             margin: 0;
         }
         .col-md-5 .col-5-main .card .second-col .title-p{
-            font-size: 14px;
+            font-size: 12px;
         }
-        .col-sm-3{
-            width: 32%;
+        .col-sm-4{
+            width: 33.3%;
         }
   }
