@@ -8,6 +8,8 @@ body{
 }
 .container{
     margin-top: 3rem;
+    width: 80%;
+    margin-inline: auto;
 }
 .first-col{
     display: flex;
