@@ -133,6 +133,30 @@ body{
     padding-inline:16px;
     border-radius: 25%;
 }
+.con-btn{
+    padding-block:10px;
+    padding-inline:16px;
+    background-color: #2a2c32;
+    color: white;
+    flex: 1;
+    box-sizing: border-box;
+}
+.scroll{
+    overflow-y: scroll;
+    height: 400px;
+}
+.scroll::-webkit-scrollbar { 
+
+    display: none;  /* Safari and Chrome */
+}
+.trash-btn-content{
+    display: flex;
+     justify-content: center;
+      align-items: center;
+       gap:1rem;
+       margin-top: 12px;
+       margin-bottom: 12px;
+}
  /*Responsive cards*/ 
  @media screen and (max-width: 768px) {
           .col-md-5 .col-5-main .card .col-md-4 p{
