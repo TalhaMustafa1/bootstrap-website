@@ -147,7 +147,7 @@ body{
 }
 .scroll::-webkit-scrollbar { 
 
-    display: none;  /* Safari and Chrome */
+    width: 0px;  /* Safari and Chrome */
 }
 .trash-btn-content{
     display: flex;
@@ -157,6 +157,50 @@ body{
        margin-top: 12px;
        margin-bottom: 12px;
 }
+.form-2{
+    overflow-y: scroll;
+    height: 400px;
+}
+.form-2::-webkit-scrollbar { 
+
+    width: 0px;  /* Safari and Chrome */
+}
+.card .row .col-md-10{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 14px;
+}
+.first-column{
+    display: flex;
+    
+    flex-direction: column;
+    
+    gap: 0.4rem;
+    font-weight: 500;
+    color: #747270;
+}
+.second-column{
+    display: flex;
+    
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.first-column p{
+    padding: 0;
+    margin: 0;
+}
+.second-column p{
+    padding: 0;
+    margin: 0;
+}
+.col-5-main .col-md-2{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+
  /*Responsive cards*/ 
  @media screen and (max-width: 768px) {
           .col-md-5 .col-5-main .card .col-md-4 p{
