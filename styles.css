@@ -255,17 +255,22 @@ body{
     flex-direction: column;
     gap:1rem;
 }.producatos-data p{
-    margin-block: 1rem;
+    margin-block: 2rem;
 }
 .producatos-card{
-    padding-block: 2rem;
+    padding-block: 1rem;
     background-color: white;
     padding-inline: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items:center;
 }
 .card-img i{
     background-color: #f8f8f8;
     padding-inline: 14px;
-    padding-block:12px;
+    padding-block:14px;
     font-size: 20px;
     border-radius: 20%;
     color: #c1c4c9;
@@ -273,12 +278,157 @@ body{
 .card-img{
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 .img-text-text p{
         padding: 0;
         margin: 0;    
 }
+.p-1{
+    padding: 0;
+    margin: 0;
+    line-height: 0.5rem;
+    font-size: 16px;
+    color: #3a3739;
+}
+.p-2{
+    padding: 0;
+    margin: 0;
+    line-height: 0.5rem;
+    font-size: 10px;
+    color: #b4b6c1;
+}
+.productos-amount{
+    display: flex;
+    align-items: center;
+}
+.venta-rapida-content{
 
+}
+.venta-rapida-content h6{
+    font-size: 0.8rem;
+    color: #baafb0;
+}
+.venta-box{
+
+    
+    padding-block: 0.7rem;
+    padding-inline: 0.8rem;
+    background-color: white;
+    min-width: 150px;
+    border-radius: 6%;
+    margin-block: 1rem;
+    
+}
+.venta-rapida-boxes{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.venta-box-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:1.4rem;
+    
+    padding-left: 0.7rem;
+}
+.venta-box-h{
+    display: flex;
+    align-items: center;
+   
+}
+.venta-box-p{
+    display: flex;
+    
+    flex-direction: column;
+    margin: 0;  
+}
+.venta-box-p p{
+    margin-bottom: 0.5rem;
+}
+.catidata-content{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.catidata-content .first-input-filed{
+    border: 1px solid black;
+    font-size: 24px;
+    padding-left: 12px;
+    padding-block: 8px;
+    
+}
+.second-input-filed {
+    margin-block: 1rem;
+    padding-left: 50px;
+    padding-block: 30px;
+    color: #c8c4c9;
+    font-size: 67px;
+
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns with equal width */
+    gap: 10px; /* Spacing between grid items */
+}
+
+/* Style for grid items */
+.grid-item {
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+/* Define the size and style of the grid rows */
+.grid-container {
+    grid-template-rows: repeat(4, auto);
+    gap: 1.5rem; /* 4 rows with auto height */
+    
+}
+
+/* Additional styling for specific grid items */
+.grid-item{
+    color:black;
+    font-weight: bold;
+    background-color: white;
+    font-size: 1.5rem;
+}
+.calculator-btn{
+    background-color: #d6d6d7 !important;
+    color: white !important;
+    border:none !important;
+    padding-block: 1rem;
+    font-size: 20px;
+    margin-block: 1rem;
+}
+
+.catidata-content h4{
+    font-size: 12px;
+    position: absolute;
+    bottom: 2px;
+}
+.euro-input input{
+       padding-block: 0.8rem;
+       padding-left: 40px; 
+       width: 100%;
+       font-size: 25px;
+}
+.euro-input{
+    position: relative;
+}
+.euro-input label{
+    position: absolute;
+    top: -14px;
+    left: 7px;
+    font: 15px;
+    z-index: 3 !important;
+    
+}
  /*Responsive cards*/ 
  @media screen and (max-width: 768px) {
           .col-md-5 .col-5-main .card .col-md-4 p{
