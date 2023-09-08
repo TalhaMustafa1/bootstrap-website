@@ -62,49 +62,49 @@ body{
     pointer-events: none;
     color: #aaa;
 }
-.col-md-5 .col-5-main{
+.col-lg-5 .col-5-main{
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
     gap:10px;
 }
-.col-md-5 .col-5-main .card{
+.col-lg-5 .col-5-main .card{
      background-color: white;
      padding-block:0.6rem;
      padding-inline: 1rem;
      
 }
-.col-md-5 .col-5-main .card .col-md-5{
+.col-lg-5 .col-5-main .card .col-lg-5{
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 
-.col-md-5 .col-5-main .card .second-col .col-md-3{
+.col-lg-5 .col-5-main .card .second-col .col-lg-3{
     display: flex;
     align-items: center;
 }
 
-.col-md-5 .col-5-main .card .col-md-4 p{
+.col-lg-5 .col-5-main .card .col-lg-4 p{
     padding:2px;
     margin: 0;
 }
 
-.col-md-5 .col-5-main .card .col-md-5 p{
+.col-lg-5 .col-5-main .card .col-lg-5 p{
     padding:2px;
     margin: 0;
 }
-.col-md-5 .col-5-main .card .col-md-3{
+.col-lg-5 .col-5-main .card .col-lg-3{
     display: flex;
 
 }
 .vertical-line{
     border-left: 3px solid black;
 }
-.col-md-5 .col-5-main .card .second-col{
+.col-lg-5 .col-5-main .card .second-col{
     font-size: 15px;
 }
-.col-md-5 .col-5-main .card .second-col .title-p{
+.col-lg-5 .col-5-main .card .second-col .title-p{
     font-size: 17px;
 }
 .last-part{
@@ -183,7 +183,7 @@ body{
 
     width: 0px;  /* Safari and Chrome */
 }
-.card .row .col-md-10{
+.card .row .col-lg-10{
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -212,7 +212,7 @@ body{
     padding: 0;
     margin: 0;
 }
-.col-5-main .col-md-2{
+.col-5-main .col-lg-2{
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -426,19 +426,38 @@ body{
     top: -14px;
     left: 7px;
     font: 15px;
-    z-index: 3 !important;
+    z-index: 1 !important;
+    
     
 }
  /*Responsive cards*/ 
- @media screen and (max-width: 768px) {
-          .col-md-5 .col-5-main .card .col-md-4 p{
+ @media screen and (max-width: 971px) {
+          .col-lg-5 .col-5-main .card .col-lg-4 p{
             padding:0px;
             margin: 0;
         }
-        .col-md-5 .col-5-main .card .second-col .title-p{
+        .col-lg-5 .col-5-main .card .second-col .title-p{
             font-size: 12px;
         }
         .col-sm-4{
             width: 33.3%;
+        }
+        .container{
+            margin-top: 3rem;
+            width: 95%;
+            margin-inline: auto;
+        }
+        .nav-pills{
+            gap: 0rem;
+        }
+        .container .row .col-lg-5{
+            margin-block: 2rem;
+        }
+        .venta-box{
+
+            min-width: 120px;
+            border-radius: 6%;
+            margin-block: 1rem;
+            
         }
   }
