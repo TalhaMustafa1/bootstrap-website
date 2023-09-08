@@ -115,7 +115,7 @@ body{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-inline: 2rem;
+    padding-inline: 1.9rem;
     margin-top: 2rem;
     border: 0.7px dotted black; /* Add the dotted border with pink color */
     box-shadow: 0 0 10px #f2f2f2; /* Add the pink box shadow in all directions */
@@ -167,6 +167,17 @@ body{
 
     width: 0px;  /* Safari and Chrome */
 }
+.col-5-main::-webkit-scrollbar{
+    width: 8px;
+    
+}
+.cont-btn {
+    display: none;
+  }
+.col-5-main::-webkit-scrollbar-thumb {
+    background: #d6d6d7; 
+    border-radius: 10px;
+  }
 .trash-btn-content{
     display: flex;
      justify-content: center;
@@ -430,6 +441,49 @@ body{
     
     
 }
+.cont-btn-content-h h4{
+    font-weight: bolder;
+}
+.cont-btn-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cont-btn-content button{
+    border: 1px solid #dbdde3 !important;
+    background-color: white !important;
+    color: #ec175b !important;
+    font-size: 12px;
+    font-weight: bold !important;
+    padding-block:0.2rem;
+    padding-inline: 0.7rem;
+    border-radius: 5px;
+} 
+.cont-btn-boxes{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    
+}
+.cont-btn-box{
+    padding-block: 0.7rem;
+    padding-inline: 2rem;
+    background-color: white;
+    border: 2px solid black;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 120px;
+    gap: 1rem;
+    border-radius: 8px;
+}
+.cont-btn-box h4{
+    font-size: 14px;
+}
  /*Responsive cards*/ 
  @media screen and (max-width: 971px) {
           .col-lg-5 .col-5-main .card .col-lg-4 p{
@@ -460,4 +514,16 @@ body{
             margin-block: 1rem;
             
         }
+  }
+  @media screen and (min-width: 971px) and (max-width:1244px) {
+    .last-part-card {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-inline: 1rem;
+        margin-top: 2rem;
+        border: 0.7px dotted black;
+        box-shadow: 0 0 10px #f2f2f2;
+    }
   }
