@@ -325,7 +325,7 @@ body{
 }
 .venta-box{
 
-    
+    cursor: pointer;
     padding-block: 0.7rem;
     padding-inline: 0.8rem;
     background-color: white;
@@ -333,6 +333,19 @@ body{
     border-radius: 6%;
     margin-block: 1rem;
     
+    
+}
+.por-cobrar-card{
+    cursor:  pointer !important;
+}
+.services-card-move{
+  cursor: pointer;
+}
+.productos-card-move{
+    cursor: pointer !important;
+}
+.arrow{
+    font-size: 40px;
 }
 .venta-rapida-boxes{
     display: flex;
@@ -515,6 +528,9 @@ input{
     }
     .metodo-h1{
         font-size: 14px !important;
+    }
+    .arrow{
+        font-size: 30px;
     }
   }
   
