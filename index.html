@@ -106,7 +106,7 @@
                 <span class="fa fa-search form-control-feedback" style="font-size: 25px;"></span>
                 <input type="text" class="form-control" placeholder="Buscar" style="font-size:17px;">
               </div>
-              <div class="col-5-main" style="overflow-y: scroll; height: 600px;">
+              <div class="col-5-main" style="overflow-y: scroll; height: 600px; padding-right: 10px;">
                 <div class="card por-cobrar-card">
                   <div class="row">
                     <div class="col-lg-10 col-sm-12 " style="width: 80%;">
@@ -127,6 +127,7 @@
                     </div>
                     <div class="col-lg-2 col-sm-2" style="width: 20%;">
                       <h5>10,00€</h5>
+
                     </div>
                   </div>
                 </div>
@@ -319,10 +320,11 @@
                     placeholder="Buscar productos por nombre o escanea el codigo de" style="font-size:17px;">
                 </div>
                 <p style="font-weight: bold;">No Categorizado</p>
-                <div class="producatos-card" id="productos-card-move" style="cursor: pointer;">
+                <div class="productos-car-flex">
+                <div class="producatos-card productos-card-move" style="cursor: pointer;">
                   <div class="img-text">
                     <div class="card-img">
-                      <i class="fas fa-image" style="font-size:28px"></i>
+                      <div class="producto-img"><i class="fas fa-image" style="font-size:28px"></i></div>
                       <div class="img-text-text">
                         <p class="p-1">Producto Test</p>
                         <p class="p-2">Lugar de almacenamiento predeterminado </p>
@@ -333,6 +335,21 @@
                     <h5>25,41€</h5>
                   </div>
                 </div>
+                <div class="producatos-card productos-card-move" style="cursor: pointer;">
+                  <div class="img-text">
+                    <div class="card-img">
+                      <div class="producto-img"><img src="https://d375139ucebi94.cloudfront.net/region2/es/77092/warehouse_commodity_photos/0bab591ffc3c4e77ac5d4f5c1d0edff0.jpeg" alt=""></div>
+                      <div class="img-text-text">
+                        <p class="p-1">Producto Test</p>
+                        <p class="p-2">Lugar de almacenamiento predeterminado </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="productos-amount">
+                    <h5>25,41€</h5>
+                  </div>
+                </div>
+              </div>
               </div>
             </div>
             <div class="tab-pane fade" id="v-pills-catidata" role="tabpanel" aria-labelledby="v-pills-catidata-tab">
@@ -407,7 +424,42 @@
              
           </div>
         </div>
-        <div class="col-lg-4 col-sm-12 last-part" style="margin-top: 0;">
+        <div class="col-lg-4 col-sm-12 last-part" style="margin-top: 0; position: relative;">
+          <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times; Editar articulo</span>
+              
+             <h4>Afeitado (30M)</h4>
+             <div class="euro-input">
+              <span style="position: absolute; margin-left: 12px; margin-top: 8px; font-size: 25px; color: #5b5e63;">€ <span style="color: #f4f4f4; font-size: 30px;">|</span></span>
+              <span style="position: absolute; right:3%; margin-top: 10px; font-size: 30px; color:black;">&times;</span>
+              <input type="text" >
+              <label>Precio</label>   
+           </div>
+            <div style="display: flex; gap: 1rem; margin-top: 20px;">
+              <div class="euro-input">
+                <div class="circle" style="position: absolute; margin-left: 12px; margin-top: 12px;">-</div>
+              <span  class="circle" style="position:  absolute; right:3%; margin-top: 12px; font-size: 30px; color:black;">+</span>
+                
+                <input type="text" style="padding-left: 40%; " >
+                <label style="font-size: 12px;">DESUENTO DE ARTICULO(%)</label>   
+             </div>
+             <div class="euro-input">
+              <span style="position: absolute; margin-left: 12px; margin-top: 8px; font-size: 25px; color: #5b5e63;">€ <span style="color: #f4f4f4; font-size: 30px;">|</span></span>
+              <input type="text" >
+              <label style="font-size: 12px;">CANTIDAD DEL DESUENTO</label>   
+           </div>
+
+            </div>
+            <div class=" trash-btn-content">
+              <i class="fa fa-trash" aria-hidden="true" style="color: red; border-radius: 8px; font-size: 14px;"><span>ELIMAR </span> </i>
+              <button class="con-btn " id="continuar-button"style="border-radius:8px;">CONTINUAR</button>
+            </div>
+            </div>
+          
+          </div>
           <div class="last-part-card">
             <div style="display: flex; gap:2px; justify-content: center; align-items: center;">
               <img src="istockphoto-1300845620-612x612.jpg" alt="" height="70px" width="70px">
@@ -421,63 +473,70 @@
           </div>
           <div class="last-part scroll ">
             <div class="last-part-main-content">
-              <p>Afeitado (30M)</p>
+              <p class="product-name">Afeitado (30M) </p>
+              <p class="cross-p">╳ <span>1</span></p>
+              <div>
+                <h5>10,00€</h5>
+                <p style="text-align: right; font-size: 12px; " id="myBtn">Descuento
+                  <br>
+                  10%
+                </p>
+              </div>
+              
+            </div>
+            <div class="last-part-main-content">
+              <p class="product-name">Afeitado (30M) </p>
               <p class="cross-p">╳ <span>1</span></p>
               <h5>10,00€</h5>
             </div>
             <div class="last-part-main-content">
-              <p>Afeitado (30M)</p>
+              <p class="product-name">Afeitado (30M) </p>
               <p class="cross-p">╳ <span>1</span></p>
               <h5>10,00€</h5>
             </div>
             <div class="last-part-main-content">
-              <p>Afeitado (30M)</p>
-              <p class="cross-p">╳ <span>1</span></p>
-              <h5>10,00€</h5>
-            </div>
-            <div class="last-part-main-content">
-              <p>Afeitado (30M)</p>
+              <p class="product-name">Afeitado (30M) </p>
               <p class="cross-p">╳ <span>1</span></p>
               <h5>10,00€</h5>
             </div>
 
             <div class="last-part-main-content">
-              <p>Afeitado (30M)</p>
+              <p class="product-name">Afeitado (30M) </p>
               <p class="cross-p">╳ <span>1</span></p>
               <h5>10,00€</h5>
             </div>
             <div class="last-part-main-content">
-              <p>Afeitado (30M)</p>
+              <p class="product-name">Afeitado (30M) </p>
               <p class="cross-p">╳ <span>1</span></p>
               <h5>10,00€</h5>
             </div>
             <div class="last-part-main-content">
-              <p>Afeitado (30M)</p>
+              <p class="product-name">Afeitado (30M) </p>
               <p class="cross-p">╳ <span>1</span></p>
               <h5>10,00€</h5>
             </div>
             <div class="last-part-main-content">
-              <p>Afeitado (30M)</p>
+              <p class="product-name">Afeitado (30M) </p>
               <p class="cross-p">╳ <span>1</span></p>
               <h5>10,00€</h5>
             </div>
             <div class="last-part-main-content">
-              <p>Afeitado (30M)</p>
+              <p class="product-name">Afeitado (30M) </p>
               <p class="cross-p">╳ <span>1</span></p>
               <h5>10,00€</h5>
             </div>
             <div class="last-part-main-content">
-              <p>Afeitado (30M)</p>
+              <p class="product-name">Afeitado (30M) </p>
               <p class="cross-p">╳ <span>1</span></p>
               <h5>10,00€</h5>
             </div>
             <div class="last-part-main-content">
-              <p>Afeitado (30M)</p>
+              <p class="product-name">Afeitado (30M) </p>
               <p class="cross-p">╳ <span>1</span></p>
               <h5>10,00€</h5>
             </div>
             <div class="last-part-main-content">
-              <p>Afeitado (30M)</p>
+              <p class="product-name">Afeitado (30M) </p>
               <p class="cross-p">╳ <span>1</span></p>
               <h5>10,00€</h5>
             </div>
@@ -498,8 +557,33 @@
       </div>
     </div>
   </main>
-  <!-- Add this code after the closing </main> tag -->
-
+  <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    </script>
   <script>
     // Get references to the button, tab content, and tabs
     const continuarButton = document.getElementById('continuar-button');
@@ -592,17 +676,31 @@
   });
 
   
-  // Get a reference to the "productos-card-move" element
-  const productosCardMove = document.getElementById('productos-card-move');
+// Get references to the elements by class
+// Get references to the elements by class
+const productosCardMoveElements = document.querySelectorAll('.productos-card-move');
+const tabButton = document.querySelectorAll('.nav-link');
 
-  // Get a reference to the "CANTIDATA PERSONALIZADA" tab button
-  const catidataTabButton = document.querySelector('#v-pills-catidata-tab');
+// Function to switch to the PRODUCTOS tab
+function switchToProductosTab() {
+  productosTabButton.click(); // Simulate a click on the PRODUCTOS tab button
+}
 
-  // Add a click event listener to the "productos-card-move" element
-  productosCardMove.addEventListener('click', () => {
-    // Simulate a click on the "CANTIDATA PERSONALIZADA" tab button
-    catidataTabButton.click();
+// Add a click event listener to each productos-card-move element
+productosCardMoveElements.forEach(element => {
+  element.addEventListener('click', () => {
+    // Find the index of the current active tab
+    const activeTab = document.querySelector('.nav-link.active');
+    const activeTabIndex = Array.from(tabButtons).indexOf(activeTab);
+
+    // Click on the next tab if it exists
+    if (activeTabIndex < tabButton.length - 1) {
+      tabButton[activeTabIndex + 1].click();
+    }
   });
+});
+
+
   </script>
 
   
