@@ -590,6 +590,13 @@ input{
     
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
   }
+  .modal-btns button{
+      padding-inline: 20px;
+      padding-block: 15px;
+      color: white;
+      font-weight: 500;
+      border-radius: 8px;
+  }
   @media screen and (min-width: 992px) and (max-width:1332px) {
     .grid-containe {
         grid-template-columns: repeat(2, 1fr);
@@ -611,6 +618,21 @@ input{
     }
     .arrow{
         font-size: 30px;
+    }
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        color: #000;
+        border: 1px solid #888;
+       width:95%;
+      }
+      .modal-btns button{
+        padding-inline: 10px;
+        padding-block: 6px;
+        color: white;
+        font-weight: 500;
+        border-radius: 8px;
     }
   }
   
