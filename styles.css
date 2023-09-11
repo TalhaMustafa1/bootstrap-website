@@ -751,6 +751,9 @@ input {
     .grid-containe {
         grid-template-columns: repeat(2, 1fr);
     }
+    .arrow{
+        font-size: 20px !important;
+    }
     .btn-trash-h h4 {
         display: inline;
         margin-right: 2px;
