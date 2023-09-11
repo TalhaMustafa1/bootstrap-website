@@ -438,15 +438,15 @@
               <input type="text" >
               <label>Precio</label>   
            </div>
-            <div style="display: flex; gap: 1rem; margin-top: 20px;">
-              <div class="euro-input">
-                <div class="circle" style="position: absolute; margin-left: 12px; margin-top: 12px;">-</div>
-              <span  class="circle" style="position:  absolute; right:3%; margin-top: 12px; font-size: 30px; color:black;">+</span>
+            <div style="display: flex; margin-top: 20px; gap: 1rem;">
+              <div class="euro-input" style="flex: 1;">
+                <div class="circle" id="decrement" style="position: absolute; margin-left: 12px; margin-top: 12px;">-</div>
+              <span  class="circle" id="increment" style="position:  absolute; right:3%; margin-top: 12px; font-size: 30px; color:black;">+</span>
                 
-                <input type="text" style="padding-left: 40%; " >
+                <input type="text"id="numberInput"  style="padding-left: 40%; " >
                 <label style="font-size: 12px;">DESUENTO DE ARTICULO(%)</label>   
              </div>
-             <div class="euro-input">
+             <div class="euro-input flex-item-1" style="flex: 1;">
               <span style="position: absolute; margin-left: 12px; margin-top: 8px; font-size: 25px; color: #5b5e63;">€ <span style="color: #f4f4f4; font-size: 30px;">|</span></span>
               <input type="text" >
               <label style="font-size: 12px;">CANTIDAD DEL DESUENTO</label>   
@@ -455,8 +455,8 @@
             </div>
             <div>
               <div style="display: flex; justify-content: space-between; margin-top: 20px;"class="modal-btns">
-            <div style="display: inline-block;  border: 2px solid #dcdde3; padding: 8px; vertical-align: middle; border-radius: 8px;">
-              <h4 style="display: inline;  margin-right: 2px;font-size: 20px; vertical-align: middle;font-weight:500;padding-left:12px;">ELIMINAR</h4>
+            <div  class="btn-trash-h">
+              <h4 >ELIMINAR</h4>
               <i class="fa fa-trash" aria-hidden="true" style="color: red; border: none;  vertical-align: middle;"></i>
             </div>
             <button style="color: #2a2c32; border: 2px solid #dcdde3;">CANCELAR</button>
@@ -479,13 +479,17 @@
             <p>Articulo</p>
             <p>Cantidad</p>
           </div>
-          <div class="last-part scroll ">
-            <div class="last-part-main-content">
+          <div style="display: flex; justify-content: center; align-items: center; flex-direction:column; display: none;" id="empty-card">
+            <p style="font-size: 20px; ;">La cesta esta vacia</p>
+            <p style="color: #b2adb9;">Selecciona articulos que quieres anadir  a la cesta</p>
+          </div>
+          <div class="last-part scroll "id="scroll-part-last">
+            <div class="last-part-main-content" id="myBtn">
               <p class="product-name">Afeitado (30M) </p>
               <p class="cross-p">╳ <span>1</span></p>
               <div>
                 <h5>10,00€</h5>
-                <p style="text-align: right; font-size: 12px; " id="myBtn">Descuento
+                <p style="text-align: right; font-size: 12px; " >Descuento
                   <br>
                   10%
                 </p>
@@ -710,8 +714,51 @@ productosCardMoveElements.forEach(element => {
 
 
   </script>
+<script>
+// Get the decrement, increment, and input elements by their IDs
+const decrementButton = document.getElementById("decrement");
+const incrementButton = document.getElementById("increment");
+const numberInput = document.getElementById("numberInput");
 
-  
+// Add click event listeners to the decrement and increment buttons
+decrementButton.addEventListener("click", () => {
+  // Get the current value from the input and decrement it
+  let currentValue = parseInt(numberInput.value) || 0;
+  if (currentValue > 0) {
+    currentValue--;
+    numberInput.value = currentValue + "%";
+  }
+});
+
+incrementButton.addEventListener("click", () => {
+  // Get the current value from the input and increment it
+  let currentValue = parseInt(numberInput.value) || 0;
+  currentValue++;
+  numberInput.value = currentValue + "%";
+});
+
+</script>
+<script>
+  // Get references to the two elements
+const emptyCard = document.getElementById("empty-card");
+const scrollPartLast = document.getElementById("scroll-part-last");
+
+// Function to toggle visibility based on content
+function toggleVisibilityBasedOnContent() {
+  // Check if the "scroll-part-last" element has any child elements
+  if (scrollPartLast.children.length > 0) {
+    emptyCard.style.display = "none";
+    scrollPartLast.style.display = "block"; // or "flex" depending on your layout
+  } else {
+    emptyCard.style.display = "flex";
+    scrollPartLast.style.display = "none";
+  }
+}
+
+// Call the function initially to set the initial visibility
+toggleVisibilityBasedOnContent();
+
+</script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
     crossorigin="anonymous"></script>
