@@ -625,7 +625,7 @@ input {
     display: none;
     /* Hidden by default */
     /* Stay in place */
-    z-index: 1;
+    z-index: 9;
     /* Sit on top */
     padding-top: 0px;
     /* Location of the box */
