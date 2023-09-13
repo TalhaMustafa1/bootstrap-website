@@ -602,7 +602,7 @@ input {
 }
 
 .product-name {
-    width: 40%;
+    width: 45%;
 }
 
 .producto-img {
@@ -720,7 +720,29 @@ input {
 .btn-trash-h{
     flex-wrap: nowrap;
 }
-
+.client-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline:2rem;
+    padding-block: 1rem;
+    gap: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    
+}
+.circular-border{
+    border-radius: 50%;
+    background-color:#e7e7e7;
+    padding: 15px;
+    width: 50px; /* Set the width and height to the same value */
+    height: 50px; /* Set the width and height to the same value */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+   
+}
 @media screen and (min-width: 992px) and (max-width:1332px) {
     .grid-containe {
         grid-template-columns: repeat(2, 1fr);
@@ -806,7 +828,16 @@ input {
     border: 1px solid #ccc;
     padding: 20px;
 }
-
+.client-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline:1rem;
+    padding-block:0.8rem;
+    gap: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    
+}
 /*Responsive cards*/
 @media screen and (max-width: 971px) {
     .col-lg-5 .col-5-main .card .col-lg-4 p {
