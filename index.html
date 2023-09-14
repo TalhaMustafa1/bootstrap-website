@@ -732,7 +732,52 @@ productosCardMoveElements.forEach(element => {
 });
 
   </script>
-
+  <script>
+    // Get references to the button, tab content, and tabs
+    const continuarButton = document.getElementById('continuar-button');
+    const colLg3 = document.querySelector('.col-lg-3');
+    const contBtnDiv = document.querySelector('.cont-btn');
+    const tabContent = document.querySelector('.tab-content');
+    const tabButton = document.querySelectorAll('.nav-link');
+    const backContent = document.getElementById('back-content');
+  
+    // Function to hide col-lg-3 and tab content
+    function hideColLg3AndTabContent() {
+      colLg3.style.display = 'none';
+      tabContent.style.display = 'none';
+    }
+  
+    // Function to show cont-btn
+    function showContBtn() {
+      contBtnDiv.style.display = 'block';
+    }
+  
+    // Function to show col-lg-3 and tab content
+    function showColLg3AndTabContent() {
+      colLg3.style.display = 'block';
+      tabContent.style.display = 'block';
+    }
+  
+    // Add a click event listener to the button
+    continuarButton.addEventListener('click', () => {
+      hideColLg3AndTabContent(); // Hide the col-lg-3 and tab content
+      showContBtn(); // Show the cont-btn content
+    });
+  
+    // Add click event listeners to the tab buttons
+    tabButton.forEach(tabButton => {
+      tabButton.addEventListener('click', () => {
+        showColLg3AndTabContent(); // Show the col-lg-3 and tab content when a tab is clicked
+        contBtnDiv.style.display = 'none'; // Hide the cont-btn content when a tab is clicked
+      });
+    });
+  
+    // Add click event listener to back-content
+    backContent.addEventListener('click', () => {
+      showColLg3AndTabContent(); // Show the col-lg-3 and tab content when back-content is clicked
+      contBtnDiv.style.display = 'none'; // Hide the cont-btn content when back-content is clicked
+    });
+  </script>
 
 <script>
 const emptyCard = document.getElementById("empty-card");
