@@ -361,8 +361,8 @@
             <div class="tab-pane fade" id="v-pills-catidata" role="tabpanel" aria-labelledby="v-pills-catidata-tab">
             <div class="catidata-content">
               <div class="euro-input">
-                <span style="position: absolute; margin-left: 12px; margin-top: 8px; font-size: 25px; color: #5b5e63;">€ <span style="color: #f4f4f4; font-size: 30px;">|</span></span>
-                <input type="text" >
+                <span style="position: absolute; margin-left: 12px; margin-top: 8px; font-size: 25px; color: #5b5e63;">€ <span style="color: #f4f4f4; font-size: 30px; ">|</span></span>
+                <input type="text">
                 <label>CANTIDAD</label>
              </div>
               
@@ -432,7 +432,6 @@
         </div>
         <div class="col-lg-4 col-sm-12 last-part" style="margin-top: 0; position: relative;" >
           <div id="myModal" class="modal">
-
             <!-- Modal content -->
             <div class="modal-content">
               <span class="close" id="closeModal1">&times; Editar articulo</span>
@@ -482,11 +481,11 @@
             <p>Articulo</p>
             <p>Cantidad</p>
           </div>
-          <div style="display: flex; justify-content: center; align-items: center; flex-direction:column; display: none;" id="empty-card">
+          <div style="display: flex; justify-content: center; align-items: center; flex-direction:column; display: none; height: 70vh;" id="empty-card">
             <p style="font-size: 20px; ;">La cesta esta vacia</p>
             <p style="color: #b2adb9;">Selecciona articulos que quieres anadir  a la cesta</p>
           </div>
-          <div id="client-part" style="display: flex; justify-content: center;align-items: center; display: none;">
+          <div id="client-part" style="height: 70vh; display: none;">
              <div class="client-card">
               <div class="circular-border">CF</div>
               <div style="font-weight: 500;width: 80%;">Cliente Nombre Foro....
@@ -570,35 +569,7 @@
               <p class="product-name" style="font-size: 18px; vertical-align: middle; line-height: 20px; ">+</p>
               <p class="cross-p" style="font-size: 17px; vertical-align: middle;font-weight: 400; color: #cec1bd; line-height: 20px;" >Descuento</p>
               <p style="font-size: 18px; vertical-align: middle; color: black; font-weight: 500;line-height: 20px;">0,00€</p>
-              <div id="Modal" class="modal">
 
-                <!-- Modal content -->
-                <div class="modal-content">
-                  <span class="close"  id="closeModal2" >&times; Descuento</span>
-                
-                <div style="display: flex; margin-top:2.5rem; margin-bottom:3rem; gap: 1rem;">
-                  <div class="euro-input" style="flex: 1;">
-                    <div class="circle" id="decrement" style="position: absolute; margin-left: 12px; margin-top: 12px; padding-bottom: 4px;">-</div>
-                  <span  class="circle" id="increment" style="position:  absolute; right:3%; margin-top: 12px; font-size: 30px; color:black;padding-bottom: 4px;">+</span>
-                    
-                    <input type="text"id="numberInput"  style="padding-left: 40%; " >
-                    <label style="font-size: 12px;">CANTIDAD DEL DESCUENTO (%)</label>   
-                 </div>
-                </div>
-                <div>
-                  <div style="display: flex; justify-content: space-between; margin-top: 20px;"class="modal-btns">
-                <div  class="btn-trash-h">
-                  <i class="fa fa-trash" aria-hidden="true" style="color: #c9c9cb; border: none;  vertical-align: middle;"></i>
-                </div>
-                <button style="color: #2a2c32; border: 2px solid #dcdde3; background-color: white;font-weight: bold;">CANCELAR</button>
-                <button style="background-color:#d6d6d7; color: white; font-weight: bold; border: none;">GUARDAR</button>
-              </div>
-              </div>
-    
-            
-                </div>
-              
-              </div>
             </div> 
 
           </div>
@@ -617,93 +588,77 @@
       </div>
     </div>
   </main>
-  <script>
-    // Get references to the modals by their unique IDs
-    var modal1 = document.getElementById("myModal");
-    var modal2 = document.getElementById("Modal");
-    // Get the buttons that open the modals
-    var btn1 = document.getElementById("myBtn");
-    var btn2 = document.getElementById("descento-modal");
-    
-    // Get the <span> elements that close the modals
-      var span1 = document.getElementById("closeModal1");
-    var span2 = document.getElementById("closeModal2");
-    
-    // Function to open the first modal
-    btn1.onclick = function() {
-      modal1.style.display = "block";
-    }
+  <div id="Modal" class="modal">
 
-    // Function to close the first modal
-    span1.onclick = function() {
-      modal1.style.display = "none";
-    }
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" id="closeModal2New">&times; Descuento</span>
     
-    // Function to open the second modal
-    btn2.onclick = function() {
-      modal2.style.display = "block";
-    }
-    
-    // Function to close the second modal
-    span2.onclick = function() {
-  modal2.style.display = "none";
-}
-    
-    // When the user clicks anywhere outside of the modals, close them
-    window.onclick = function(event) {
-      if (event.target == modal1) {
-        modal1.style.display = "none";
-      }
-      if (event.target == modal2) {
-        modal2.style.display = "none";
-      }
-    }
-</script>
+    <div style="display: flex; margin-top:2.5rem; margin-bottom:3rem; gap: 1rem;">
+      <div class="euro-input" style="flex: 1;">
+        <div class="circle" id="decrement" style="position: absolute; margin-left: 12px; margin-top: 12px; padding-bottom: 4px;">-</div>
+      <span  class="circle" id="increment" style="position:  absolute; right:3%; margin-top: 12px; font-size: 30px; color:black;padding-bottom: 4px;">+</span>
+        
+        <input type="text"id="numberInput"  style="padding-left: 40%; " >
+        <label style="font-size: 12px;">CANTIDAD DEL DESCUENTO (%)</label>   
+     </div>
+    </div>
+    <div>
+      <div style="display: flex; justify-content: space-between; margin-top: 20px;"class="modal-btns">
+    <div  class="btn-trash-h">
+      <i class="fa fa-trash" aria-hidden="true" style="color: #c9c9cb; border: none;  vertical-align: middle;"></i>
+    </div>
+    <button style="color: #2a2c32; border: 2px solid #dcdde3; background-color: white;font-weight: bold;">CANCELAR</button>
+    <button style="background-color:#d6d6d7; color: white; font-weight: bold; border: none;">GUARDAR</button>
+  </div>
+  </div>
+    </div>
+  </div>
   <script>
-    // Get references to the button, tab content, and tabs
-    const continuarButton = document.getElementById('continuar-button');
-    const colLg3 = document.querySelector('.col-lg-3');
-    const contBtnDiv = document.querySelector('.cont-btn');
-    const tabContent = document.querySelector('.tab-content');
-    const tabButtons = document.querySelectorAll('.nav-link');
-    const backContent = document.getElementById('back-content');
+ // Get references to the modals by their unique IDs
+var modal1 = document.getElementById("myModal");
+var modal2 = document.getElementById("Modal");
+
+// Get the buttons that open the modals
+var btn1 = document.getElementById("myBtn");
+var btn2 = document.getElementById("descento-modal");
+
+// Get the <span> elements that close the modals
+var span1 = document.getElementById("closeModal1");
+var span2New = document.getElementById("closeModal2New"); // Change the ID here
+
+// Function to open the first modal
+btn1.onclick = function () {
+  modal1.style.display = "block";
+};
+
+// Function to close the first modal
+span1.onclick = function () {
+  modal1.style.display = "none";
+};
+
+// Function to open the second modal
+btn2.onclick = function () {
+  modal2.style.display = "block";
+};
+span2New.onclick = function () {
+  modal2.style.display = "none";
   
-    // Function to hide col-lg-3 and tab content
-    function hideColLg3AndTabContent() {
-      colLg3.style.display = 'none';
-      tabContent.style.display = 'none';
-    }
-  
-    // Function to show cont-btn
-    function showContBtn() {
-      contBtnDiv.style.display = 'block';
-    }
-  
-    // Function to show col-lg-3 and tab content
-    function showColLg3AndTabContent() {
-      colLg3.style.display = 'block';
-      tabContent.style.display = 'block';
-    }
-  
-    // Add a click event listener to the button
-    continuarButton.addEventListener('click', () => {
-      hideColLg3AndTabContent(); // Hide the col-lg-3 and tab content
-      showContBtn(); // Show the cont-btn content
-    });
-  
-    // Add click event listeners to the tab buttons
-    tabButtons.forEach(tabButton => {
-      tabButton.addEventListener('click', () => {
-        showColLg3AndTabContent(); // Show the col-lg-3 and tab content when a tab is clicked
-        contBtnDiv.style.display = 'none'; // Hide the cont-btn content when a tab is clicked
-      });
-    });
-  
-    // Add click event listener to back-content
-    backContent.addEventListener('click', () => {
-      showColLg3AndTabContent(); // Show the col-lg-3 and tab content when back-content is clicked
-      contBtnDiv.style.display = 'none'; // Hide the cont-btn content when back-content is clicked
-    });
+};
+// Function to close the second modal when "closeModal2New" is clicked
+
+// When the user clicks anywhere outside of the modals, close them
+window.onclick = function (event) {
+  if (event.target == modal2) {
+    modal2.style.display = "none";
+   
+  }
+  if (event.target == modal1) {
+    modal1.style.display = "none";
+  }
+
+};
+
   </script>
   <script>
     // Get references to the elements
@@ -753,56 +708,33 @@
   
 // Get references to the elements by class
 // Get references to the elements by class
+// Get references to the elements by class
 const productosCardMoveElements = document.querySelectorAll('.productos-card-move');
-const tabButton = document.querySelectorAll('.nav-link');
+const tabButtons = document.querySelectorAll('.nav-link');
 
 // Function to switch to the PRODUCTOS tab
 function switchToProductosTab() {
-  productosTabButton.click(); // Simulate a click on the PRODUCTOS tab button
+  // Find the index of the current active tab
+  const activeTab = document.querySelector('.nav-link.active');
+  const activeTabIndex = Array.from(tabButtons).indexOf(activeTab);
+
+  // Click on the next tab if it exists
+  if (activeTabIndex < tabButtons.length - 1) {
+    tabButtons[activeTabIndex + 1].click();
+  }
 }
 
 // Add a click event listener to each productos-card-move element
 productosCardMoveElements.forEach(element => {
   element.addEventListener('click', () => {
-    // Find the index of the current active tab
-    const activeTab = document.querySelector('.nav-link.active');
-    const activeTabIndex = Array.from(tabButtons).indexOf(activeTab);
-
-    // Click on the next tab if it exists
-    if (activeTabIndex < tabButton.length - 1) {
-      tabButton[activeTabIndex + 1].click();
-    }
+    switchToProductosTab(); // Switch to the PRODUCTOS tab when a productos-card-move element is clicked
   });
 });
 
-
   </script>
+
+
 <script>
-// Get the decrement, increment, and input elements by their IDs
-const decrementButton = document.getElementById("decrement");
-const incrementButton = document.getElementById("increment");
-const numberInput = document.getElementById("numberInput");
-
-// Add click event listeners to the decrement and increment buttons
-decrementButton.addEventListener("click", () => {
-  // Get the current value from the input and decrement it
-  let currentValue = parseInt(numberInput.value) || 0;
-  if (currentValue > 0) {
-    currentValue--;
-    numberInput.value = currentValue + "%";
-  }
-});
-
-incrementButton.addEventListener("click", () => {
-  // Get the current value from the input and increment it
-  let currentValue = parseInt(numberInput.value) || 0;
-  currentValue++;
-  numberInput.value = currentValue + "%";
-});
-
-</script>
-<script>
-  // Get references to the two elements
 const emptyCard = document.getElementById("empty-card");
 const scrollPartLast = document.getElementById("scroll-part-last");
 
@@ -820,10 +752,6 @@ function toggleVisibilityBasedOnContent() {
 
 // Call the function initially to set the initial visibility
 toggleVisibilityBasedOnContent();
-
-</script>
-<script>
-  
 </script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
